@@ -4,6 +4,8 @@ import MyHero from './components/MyHero/MyHero';
 import AboutMe from './components/AboutMe/AboutMe';
 import MyProject from './components/MyProject/MyProject'; 
 import Contact from './components/Contact/Contact'; 
+import Footer from './components/Footer/Footer'; // Footer 컴포넌트 가져오기
+
 
 import './App.css';
 
@@ -31,6 +33,7 @@ const Home: React.FC = () => {
       <Element name="contact">
         <Contact />
       </Element>
+      <Footer />
     </div>
   );
 };

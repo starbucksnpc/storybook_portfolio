@@ -10,10 +10,7 @@ const Contact: React.FC = () => {
       <div className="Contact-link">
         <MyLink 
           label="Let's Talk" 
-          href="https://www.linkedin.com/in/sol-nam-44106b289/" 
-          backgroundColor="#13b4f4"
-          color="white"
-          hoverColor="#0056b3"
+          href="https://www.linkedin.com/in/sol-nam-44106b289/" // 실제 이메일 링크를 넣어주세요
         />
       </div>
     </div>
@@ -21,3 +18,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+

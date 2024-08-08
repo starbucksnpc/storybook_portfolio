@@ -1,0 +1,38 @@
+.Footer {
+    text-align: center;
+    padding: 20px;
+    /* background-color: #f5f5f5;  */
+    margin-top: 100px;
+  }
+  
+  .Footer button {
+    margin-bottom: 20px;
+  }
+  
+  .Footer-links {
+    margin: 20px 0;
+  }
+  
+  .Footer-links a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .Footer-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .Footer-divider {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #dcdcdc;
+  }
+  
+  .Footer-copyright {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  

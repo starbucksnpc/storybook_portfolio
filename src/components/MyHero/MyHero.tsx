@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MyHeroProps } from './MyHero.types';
+import MyButton from '../MyButton/MyButton'; // MyButton 컴포넌트 가져오기
 import heroImage from '../../images/hero-image.jpg'; // 이미지 파일 경로
 
 const HeroContainer = styled.div<{ disabled?: boolean; disabledBackgroundColor?: string; visible?: boolean }>`
@@ -53,21 +54,6 @@ const Subtitle = styled.h2`
   margin-top: 0px;
 `;
 
-const Button = styled.button<{ disabled?: boolean }>`
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
-  transition: background-color 0.3s;
-  
-  &:hover {
-    background-color: ${({ disabled }) => (disabled ? '#007bff' : '#0056b3')};
-  }
-`;
-
 const MyHero: React.FC<MyHeroProps> = ({ title, subtitle, buttonText, onButtonClick, disabled = false, disabledBackgroundColor, visible = true }) => {
   return (
     <HeroContainer disabled={disabled} disabledBackgroundColor={disabledBackgroundColor} visible={visible}>
@@ -75,9 +61,11 @@ const MyHero: React.FC<MyHeroProps> = ({ title, subtitle, buttonText, onButtonCl
       <ContentContainer>
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
-        <Button onClick={!disabled ? onButtonClick : undefined} disabled={disabled}>
-          {buttonText}
-        </Button>
+        <MyButton 
+          label={buttonText} 
+          onClick={onButtonClick} 
+          disabled={disabled} 
+        />
       </ContentContainer>
     </HeroContainer>
   );
