@@ -1,0 +1,19 @@
+.Contact {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .Contact-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .Contact-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .Contact-link {
+    margin-top: 20px;
+  }
+  

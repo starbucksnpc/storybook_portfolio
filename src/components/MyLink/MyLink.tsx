@@ -27,10 +27,10 @@ const StyledLink = styled.a<{ color?: string; hoverColor?: string; backgroundCol
   }
 `;
 
-const MyLink: React.FC<MyLinkProps> = ({ label, disabled = false, style, backgroundColor, color, hoverColor }) => {
+const MyLink: React.FC<MyLinkProps> = ({ label, disabled = false, style, backgroundColor, color, hoverColor, href }) => {
   return (
     <StyledLink
-      href={disabled ? undefined : "#"}
+      href={disabled ? undefined : href}
       aria-disabled={disabled}
       style={style}
       backgroundColor={backgroundColor}
@@ -44,3 +44,13 @@ const MyLink: React.FC<MyLinkProps> = ({ label, disabled = false, style, backgro
 };
 
 export default MyLink;
+
+export interface MyLinkProps {
+  label: string;
+  color?: string;
+  hoverColor?: string;
+  disabled?: boolean;
+  style?: React.CSSProperties;
+  backgroundColor?: string;
+  href: string;
+}
