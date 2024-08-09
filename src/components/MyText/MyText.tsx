@@ -21,4 +21,4 @@ const MyText: React.FC<MyTextProps> = ({ text, size = 'medium', fontWeight = 'no
   return <StyledText size={size} fontWeight={fontWeight} disabled={disabled}>{text}</StyledText>;
 };
 
-export default MyText; 
+export default MyText;

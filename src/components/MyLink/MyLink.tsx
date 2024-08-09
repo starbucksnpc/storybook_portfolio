@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { MyLinkProps } from './MyLink.types';
 
-const StyledLink = styled.a<{ color?: string; hoverColor?: string; backgroundColor?: string; disabled?: boolean }>`
+const StyledLink = styled.a<{ hoverColor?: string; disabled?: boolean }>`
   background-color: transparent;  
   color: #007bff;
   border: 2px solid #007bff;
@@ -18,23 +18,32 @@ const StyledLink = styled.a<{ color?: string; hoverColor?: string; backgroundCol
 
   &:hover {
     background-color: ${({ disabled }) => (disabled ? 'transparent' : '#007bff')};
-    color: ${({ disabled }) => (disabled ? '#007bff' : '#fff')};
+    color: ${({ disabled }) => (disabled ? '#007bff' : '#fff')}; 
   }
 
-  &:disabled {
+  &[aria-disabled='true'] {
     cursor: not-allowed;
     opacity: 0.6;
-    pointer-events: none;
+    pointer-events: auto;  // 클릭은 막지만 커서를 금지 마크로 유지
   }
 `;
 
-const MyLink: React.FC<MyLinkProps> = ({ label, disabled = false, style, href }) => {
+const MyLink: React.FC<MyLinkProps> = ({ label, disabled = false, style, href, onClick }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (disabled) {
+      e.preventDefault(); // 링크가 비활성화된 경우 기본 동작 방지
+    } else if (onClick) {
+      e.preventDefault(); // 기본 동작 방지
+      onClick(e);
+    }
+  };
+
   return (
     <StyledLink
       href={disabled ? undefined : href}
       aria-disabled={disabled}
       style={style}
-      disabled={disabled}
+      onClick={handleClick}
     >
       {label}
     </StyledLink>
@@ -48,4 +57,5 @@ export interface MyLinkProps {
   disabled?: boolean;
   style?: React.CSSProperties;
   href: string;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
