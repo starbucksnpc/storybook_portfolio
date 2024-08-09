@@ -28,3 +28,19 @@
   font-size: 16px;
   padding: 12px 24px;
 }
+
+/* 반응형 디자인 적용 */
+@media (max-width: 768px) {
+  .storybook-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .storybook-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}

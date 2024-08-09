@@ -17,3 +17,23 @@
     margin-top: 20px;
   }
   
+  /* 반응형 디자인 적용 */
+@media (max-width: 768px) {
+    .Contact-title {
+      font-size: 2.5rem; /* 더 작은 화면에서 타이틀 크기 조정 */
+    }
+  
+    .Contact-text {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Contact-title {
+      font-size: 2rem; /* 더 작은 화면에서 타이틀 크기 조정 */
+    }
+  
+    .Contact-text {
+      font-size: 1rem;
+    }
+  }

@@ -41,7 +41,7 @@
   font-size: 11px;
   line-height: 12px;
   font-weight: 700;
-  background: #e7fdd8;
+  /* background: #e7fdd8; */
   color: #66bf3c;
   padding: 4px 12px;
   margin-right: 10px;
@@ -66,4 +66,42 @@
 
 .storybook-page .tip-wrapper svg path {
   fill: #1ea7fd;
+}
+/* 반응형 디자인 적용 */
+@media (max-width: 768px) {
+  .storybook-page {
+    padding: 24px 10px;
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .storybook-page h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .storybook-page .tip-wrapper {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .storybook-page {
+    padding: 16px 8px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .storybook-page h2 {
+    font-size: 24px;
+  }
+
+  .storybook-page .tip-wrapper {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }

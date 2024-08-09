@@ -4,43 +4,105 @@
   }
   
   .MyProject-title {
-    text-align: center; /* 가운데 정렬 */
-    font-size: 3.5rem; /* 더 크게 설정 */
+    text-align: center;
+    font-size: 3.5rem;
     margin-top: 160px;
     margin-bottom: 40px;
+  
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      margin-top: 100px;
+      margin-bottom: 30px;
+    }
+  
+    @media (max-width: 480px) {
+      font-size: 2rem;
+      margin-top: 80px;
+      margin-bottom: 20px;
+    }
   }
   
   .MyProject-content {
     display: flex;
+    flex-direction: column; /* 모바일에서 세로로 배치 */
     align-items: flex-start;
     padding: 20px;
     border-radius: 10px;
+  
+    @media (min-width: 769px) {
+      flex-direction: row; /* 큰 화면에서는 가로 배치 */
+    }
   }
   
   .MyProject-text {
     max-width: 600px;
-    margin-right: 20px; /* 오른쪽 여백 추가 */
-    margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 60px;
+  
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-left: 0;
+      text-align: center; /* 작은 화면에서 가운데 정렬 */
+    }
   }
   
   .MyProject-text h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+  
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+  
+    @media (max-width: 480px) {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
   }
   
   .MyProject-text p {
     font-size: 1.2em;
     line-height: 1.5;
     margin: 0 0 20px;
+  
+    @media (max-width: 768px) {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+  
+    @media (max-width: 480px) {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
   }
   
   .MyProject-link {
     margin-top: 20px;
+  
+    @media (max-width: 768px) {
+      margin-top: 15px;
+      text-align: center; /* 링크를 가운데 정렬 */
+    }
+  
+    @media (max-width: 480px) {
+      margin-top: 10px;
+    }
   }
   
   .MyProject-image {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: auto;
     border-radius: 10px;
+    margin-top: 20px;
+  
+    @media (max-width: 768px) {
+      margin-top: 15px;
+    }
+  
+    @media (max-width: 480px) {
+      margin-top: 10px;
+    }
   }
   
