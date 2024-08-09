@@ -18,7 +18,7 @@ const AboutMe: React.FC = () => {
           <div className="AboutMe-link">
             <MyLink 
               label="Resume" 
-              href="https://www.notion.so/Resume_SolNam-a275b17efc4344a69332a0006c3875d5" // 실제 링크를 넣어주세요
+              href="https://www.notion.so/Resume_SolNam-a275b17efc4344a69332a0006c3875d5" 
               backgroundColor="#13b4f4"
               color="white"
               hoverColor="#0056b3"

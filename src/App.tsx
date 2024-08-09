@@ -1,14 +1,12 @@
-import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // Switch를 Routes로 대체
-import { Element, scroller } from 'react-scroll';
-
-import MyHero from './components/MyHero/MyHero';
-import AboutMe from './components/AboutMe/AboutMe';
-import MyProject from './components/MyProject/MyProject'; 
-import Contact from './components/Contact/Contact'; 
-import Footer from './components/Footer/Footer'; 
-
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MyHero from "./components/MyHero/MyHero";
+import AboutMe from "./components/AboutMe/AboutMe";
+import MyProject from "./components/MyProject/MyProject";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import { Element, scroller } from "react-scroll";
+import "./App.css";
 
 const Home: React.FC = () => {
   return (
@@ -18,10 +16,10 @@ const Home: React.FC = () => {
         subtitle="I’m a Full Stack Web Developer"
         buttonText="Know More"
         onButtonClick={() => {
-          scroller.scrollTo('about', {
+          scroller.scrollTo("about", {
             duration: 800,
             delay: 0,
-            smooth: 'easeInOutQuart',
+            smooth: "easeInOutQuart",
           });
         }}
       />
@@ -43,8 +41,8 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} /> 
-        {/* 다른 라우트를 추가하려면 여기에 추가하세요 */}
+        <Route path="/" element={<Home />} />
+        {/* Add other routes here if needed */}
       </Routes>
     </Router>
   );
